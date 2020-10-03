@@ -14,8 +14,8 @@ body {
 html {
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
-  line-height: 1.38;
   font-weight: 300;
+  line-height: 1.38;
   color: $text;
 }
 
@@ -137,22 +137,81 @@ svg {
 }
 
 .container-lg {
-  padding: 0 50px;
   max-width: 1920px;
+  padding: 0 50px;
+
   @include max(1023) {
     padding: 0 30px;
   }
   @include max(540) {
-    padding: 0 15px;
+    padding: 0 16px;
   }
 }
+
 .container {
-  padding: 0 100px;
   max-width: 1480px;
+  padding: 0 100px;
+
   @include max(767) {
     padding: 0 30px;
   }
   @include max(540) {
-    padding: 0 15px;
+    padding: 0 16px;
   }
 }
+
+.btn {
+  font-family: 'Rubik', sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.2;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+  padding: 7px 40px;
+  cursor: pointer;
+  user-select: none;
+  transition: $transition;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 40px !important;
+  box-shadow: none;
+
+  @include max(680) {
+    min-height: 60px;
+  }
+}
+
+.btn--red {
+  background-color: #ff585d;
+  &:hover {
+    background-color: #e42e33;
+  }
+}
+
+.btn--pink {
+  background-color: #ff808b;
+  &:hover {
+    background-color: #ff585d;
+  }
+}
+
+//
+//.btn--white{
+//  color: #FF808B;
+//  background-color: #FFf;
+//
+//}
+//.btn--transparent-white{
+//  background-color: transparent;
+//  border: 2px solid #fff;
+//}
+//.btn--transparent-red{
+//  background-color: transparent;
+//  border: 2px solid #FF585D;
+//  color: #FF585D;
+//}

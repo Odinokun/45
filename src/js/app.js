@@ -6,17 +6,15 @@ $(function() {
   // begin no-JS
   require('./modules/noJs')();
 
-  // begin Sticky header
-  require('./modules/stickyHeader')();
+  // begin Slick slider
+  require('./modules/slick')();
+
 
   // begin phone mask
   // require('./modules/maskedinput')();
 
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
-
-  // begin Slick slider
-  // require('./modules/slick')();
 
   // begin Popup
   // require('./modules/popup')();
