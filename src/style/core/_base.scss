@@ -15,6 +15,7 @@ html {
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
   line-height: 1.38;
+  font-weight: 300;
   color: $text;
 }
 
@@ -136,8 +137,22 @@ svg {
 }
 
 .container-lg {
+  padding: 0 50px;
   max-width: 1920px;
+  @include max(1023) {
+    padding: 0 30px;
+  }
+  @include max(540) {
+    padding: 0 15px;
+  }
 }
 .container {
-  max-width: 1380px;
+  padding: 0 100px;
+  max-width: 1480px;
+  @include max(767) {
+    padding: 0 30px;
+  }
+  @include max(540) {
+    padding: 0 15px;
+  }
 }
