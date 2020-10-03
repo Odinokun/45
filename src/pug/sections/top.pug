@@ -1,0 +1,18 @@
+mixin top-section__slide(pic)
+  .top-section__slide(style="background-image: url('assets/img/top-slider-" + pic + ".jpg');")
+    .container
+      .top-section__text
+        h2.top-section__title Климакс
+        h3.top-section__subtitle Не бойтесь знать, спешите действовать!
+        .top-section__description Запишитесь на онлайн консультацию врача
+        a(href="#").btn.btn--red.top-section__btn записаться
+
+//begin top-section
+.top-section
+  .top-section__slider#top-section__slider
+    +top-section__slide('01')
+    +top-section__slide('02')
+    +top-section__slide('03')
+    +top-section__slide('04')
+    +top-section__slide('05')
+//end top-section

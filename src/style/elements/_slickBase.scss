@@ -6,11 +6,11 @@
 
 // скрываем слайдер до его инициализации
 // .card-slider-lg__list исправить на текущий класс
-.card-slider-lg__list {
+.top-section__slider {
   visibility: hidden;
 }
 
-.card-slider-lg__list.slick-initialized {
+.top-section__slider.slick-initialized {
   visibility: visible;
 }
 

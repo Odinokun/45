@@ -1,0 +1,133 @@
+.top-section__slider {
+  .prev,
+  .next {
+    position: absolute;
+    z-index: 1;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    transition: $transition;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: transparent;
+
+    @include max(1023) {
+      bottom: 30px;
+    }
+    @include max(540) {
+      bottom: 16px;
+      width: 60px;
+      height: 60px;
+    }
+
+    &:hover {
+      border-color: #ff808b;
+      background-color: #ff808b;
+    }
+    svg {
+      fill: #fff;
+      width: 25px;
+      height: 12px;
+    }
+  }
+  .next {
+    right: 50px;
+
+    @include max(1023) {
+      right: 30px;
+    }
+    @include max(540) {
+      right: 16px;
+    }
+  }
+  .prev {
+    right: 140px;
+
+    @include max(1023) {
+      right: 120px;
+    }
+    @include max(540) {
+      right: 86px;
+    }
+  }
+}
+
+.top-section__slide {
+  position: relative;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 170px 0 100px 0;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include max(1023) {
+    padding: 60px 0 80px 0;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    pointer-events: none;
+    opacity: .5;
+    background-image: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+  }
+}
+
+.top-section__text {
+  max-width: 840px;
+}
+
+.top-section__title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #fff;
+
+  @include responsive-font(80, 50);
+  @include max(680) {
+    margin-bottom: 10px;
+  }
+}
+
+.top-section__subtitle {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 15px;
+  color: #fff;
+
+  @include responsive-font(35, 26);
+}
+
+.top-section__description {
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 1.5;
+  display: block;
+  color: #fff;
+
+  @include responsive-font(25, 20);
+}
+
+.top-section__btn {
+  min-width: 350px;
+  margin-top: 55px;
+
+  @include max(680) {
+    margin-top: 30px;
+  }
+  @include max(540) {
+    width: 100%;
+    min-width: 0;
+  }
+}
