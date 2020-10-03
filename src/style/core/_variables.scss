@@ -1,0 +1,14 @@
+// ===== main colors =====
+$brand: #FF585D;
+$highlight: #FF585D;
+$highlight-hov: darken($highlight, 5%);
+
+// ===== text colors =====
+$text: #181a19;
+
+// ===== link colors =====
+$link: lighten($brand, 10%);
+$link-hov: lighten($link, 25%);
+
+// ===== transition =====
+$transition: .5s ease-in-out;
