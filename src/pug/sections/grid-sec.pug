@@ -1,0 +1,29 @@
+mixin grid-sec__item(className, pic, countMessaae, hashtag, title)
+  li( class="grid-sec__item grid-sec-item grid-sec-item--" + className)
+    a(href="#").grid-sec-item__title #{title}
+    img(src="assets/img/bg-grid-" + pic + ".jpg" alt="picture").grid-sec-item__img
+    .grid-sec-item__footer
+      a(href="#").grid-sec-item__hashtag #{hashtag}
+      .grid-sec-item__footer-right
+        a(href="#").grid-sec-item__message
+          span #{countMessaae}
+          +svg('message')
+        a(href="#").grid-sec-item__share
+          +svg('share')
+
+//begin grid-sec
+.grid-sec
+  .container
+    //begin grid-sec__list
+    ul.grid-sec__list
+      +grid-sec__item('01', '01', '254', 'Симптомы климакса', 'Почему болит грудь при климаксе: причины и лечение')
+      +grid-sec__item('02', '02', '37', 'Советы', 'Питание при климаксе: общие принципы')
+      +grid-sec__item('03', '03', '9', 'Ранний климакс', 'Что делать, если до 40 появились признаки менопаузы?')
+      +grid-sec__item('04', '04', '254', 'Советы', 'Нужно ли предохраняться при климаксе: как правильно это делать')
+      +grid-sec__item('05', '05', '9', 'Советы', 'Неприятный запах при климаксе у женщин: от чего появляется, как избавиться')
+      +grid-sec__item('06', '06', '254', 'Симптомы климакса', 'Почему болит грудь при климаксе: причины и лечение')
+      +grid-sec__item('07', '07', '37', 'Симптомы климакса', 'Норма эндометрия матки при климаксе')
+    //end grid-sec__list
+    .grid-sec__footer
+      a(href="#").btn.btn--transparent-red.grid-sec__btn ВСЕ СТАТЬИ
+//end grid-sec
