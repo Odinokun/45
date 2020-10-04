@@ -187,25 +187,34 @@ svg {
 }
 
 .btn--red {
+  border: 2px solid #ff585d;
   background-color: #ff585d;
   &:hover {
+  border: 2px solid #e42e33;
     background-color: #e42e33;
   }
 }
 
 .btn--pink {
+  border: 2px solid #ff808b;
   background-color: #ff808b;
   &:hover {
+  border: 2px solid #ff585d;
     background-color: #ff585d;
   }
 }
 
-//
-//.btn--white{
-//  color: #FF808B;
-//  background-color: #FFf;
-//
-//}
+.btn--white {
+  border: 2px solid #fff;
+
+  color: #ff585d;
+  background-color: #fff;
+  &:hover {
+  border: 2px solid #ffeaec;
+    background-color: #ffeaec;
+  }
+}
+
 //.btn--transparent-white{
 //  background-color: transparent;
 //  border: 2px solid #fff;
