@@ -21,7 +21,49 @@ block content
       include ../sections/form-sec
       include ../sections/grid-sec
       include ../sections/question-sec
+      include ../sections/map-sec
     //end content
 
     include ../sections/footer
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA')
     include ../sections/scripts
+    //script(type='text/javascript').
+    //  function initMap() {
+    //    var myLatLng = {lat: 59.9020, lng: 30.3968};
+    //    var map = new google.maps.Map(document.getElementById('map'), {
+    //      zoom: 13,
+    //      center: myLatLng,
+    //      styles: [{
+    //        "featureType": "administrative",
+    //        "elementType": "labels.text.fill",
+    //        "stylers": [{"color": "#444444"}]
+    //      }, {
+    //        "featureType": "landscape",
+    //        "elementType": "all",
+    //        "stylers": [{"color": "#f2f2f2"}]
+    //      }, {"featureType": "poi", "elementType": "all", "stylers": [{"visibility": "off"}]}, {
+    //        "featureType": "road",
+    //        "elementType": "all",
+    //        "stylers": [{"saturation": -100}, {"lightness": 45}]
+    //      }, {
+    //        "featureType": "road.highway",
+    //        "elementType": "all",
+    //        "stylers": [{"visibility": "simplified"}]
+    //      }, {
+    //        "featureType": "road.arterial",
+    //        "elementType": "labels.icon",
+    //        "stylers": [{"visibility": "off"}]
+    //      }, {
+    //        "featureType": "transit",
+    //        "elementType": "all",
+    //        "stylers": [{"visibility": "off"}]
+    //      }, {"featureType": "water", "elementType": "all", "stylers": [{"color": "#46bcec"}, {"visibility": "on"}]}]
+    //    });
+    //    var marker = new google.maps.Marker({
+    //      position: myLatLng,
+    //      map: map,
+    //      title: 'Kerner'
+    //    });
+    //  }
+    //script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA&callback=initMap")
+
