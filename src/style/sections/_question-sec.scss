@@ -1,0 +1,103 @@
+.question-sec {
+  padding: 120px 0;
+  background-color: #ffeaec;
+  background-image: url('../img/bg-questions-sec-01.jpg'), url('../img/bg-questions-sec-02.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 50%, 100% 50%;
+  background-size: contain;
+
+  @include max(1023) {
+    padding: 70px 0;
+    background-image: url('../img/bg-questions-sec-01-tablet.jpg'), url('../img/bg-questions-sec-02-tablet.jpg');
+  }
+  @include max(540) {
+    padding: 50px 0;
+    background-image: url('../img/bg-questions-sec-01-mobile.jpg'), url('../img/bg-questions-sec-02-mobile.jpg');
+    background-position: 0 0, 100% 100%;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @include max(1023) {
+      flex-direction: column;
+    }
+  }
+}
+
+.question-sec__title {
+  font-weight: bold;
+  line-height: 1.33;
+  flex: none;
+  max-width: 325px;
+  padding-right: 50px;
+  text-transform: uppercase;
+  color: #323232;
+
+  @include responsive-font(45, 27);
+  @include max(1023) {
+    max-width: 100%;
+    margin-bottom: 30px;
+    padding-right: 0;
+  }
+  span {
+    display: block;
+
+    @include max(1023) {
+      display: inline;
+    }
+  }
+}
+
+.question-sec__body {
+  max-width: 790px;
+  padding-top: 10px;
+}
+
+.question-sec__link {
+  display: flex;
+  margin-bottom: 48px;
+
+  @include max(540) {
+    margin-bottom: 35px;
+  }
+  &:hover {
+    span {
+      text-decoration: underline;
+      color: #ff808b;
+    }
+  }
+  svg {
+    flex: none;
+    fill: #ff808b;
+    width: 35px;
+    height: 35px;
+    margin-right: 35px;
+
+    @include max(540) {
+      width: 20px;
+      height: 20px;
+      margin-right: 25px;
+      transform: translateY(5px);
+    }
+  }
+  span {
+    font-weight: normal;
+    line-height: 1.38;
+    transition: $transition;
+    color: #323232;
+
+    @include responsive-font(26, 20);
+  }
+}
+
+.question-sec__btn {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 30px;
+
+  @include max(540) {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+}
