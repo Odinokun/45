@@ -1,0 +1,115 @@
+.welcome-sec {
+  padding-top: 70px;
+  padding-bottom: 118px;
+
+  @include max(1100) {
+    padding-top: 20px;
+    padding-bottom: 80px;
+  }
+  @include max(540) {
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.welcome-sec__title {
+  font-weight: bold;
+  line-height: 1.33;
+  width: 100%;
+  margin-bottom: 100px;
+  text-transform: uppercase;
+  color: #323232;
+
+  @include responsive-font(45, 30);
+  @include max(1100) {
+    margin-bottom: 50px;
+  }
+  @include max(540) {
+    margin-bottom: 30px;
+  }
+}
+
+.welcome-sec__blockquote {
+  width: 50%;
+  margin-bottom: 30px;
+  padding-right: 30px;
+
+  @include max(1100) {
+    width: 100%;
+    padding-right: 0;
+  }
+  blockquote {
+    font-weight: 300;
+    line-height: 1.53;
+    max-width: 480px;
+    margin: 0;
+    padding-left: 30px;
+    color: #323232;
+    border-left: 2px solid #ff585d;
+
+    @include responsive-font(19, 17);
+    @include max(1100) {
+      max-width: 700px;
+    }
+    @include max(540) {
+      padding-left: 20px;
+    }
+  }
+}
+
+.welcome-sec__info {
+  width: 50%;
+
+  @include max(1100) {
+    width: 100%;
+  }
+  span {
+    font-weight: 300;
+    line-height: 1.38;
+    display: block;
+    margin-bottom: 70px;
+    color: #323232;
+
+    @include responsive-font(19, 17);
+    @include max(1100) {
+      margin-bottom: 30px;
+    }
+  }
+  strong {
+    font-weight: 300;
+    line-height: 1.38;
+
+    @include responsive-font(26, 20);
+  }
+}
+
+.welcome-sec__btn {
+  margin-top: -12px;
+
+  @include max(1100) {
+    margin-top: 0;
+  }
+  @include max(540) {
+    width: 100%;
+  }
+  span {
+    font-family: 'Rubik', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+    user-select: none;
+    white-space: nowrap;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+
+    @include max(540) {
+      display: none;
+    }
+  }
+}
