@@ -190,7 +190,7 @@ svg {
   border: 2px solid #ff585d;
   background-color: #ff585d;
   &:hover {
-  border: 2px solid #e42e33;
+    border: 2px solid #e42e33;
     background-color: #e42e33;
   }
 }
@@ -199,28 +199,32 @@ svg {
   border: 2px solid #ff808b;
   background-color: #ff808b;
   &:hover {
-  border: 2px solid #ff585d;
+    border: 2px solid #ff585d;
     background-color: #ff585d;
   }
 }
 
 .btn--white {
-  border: 2px solid #fff;
-
   color: #ff585d;
+  border: 2px solid #fff;
   background-color: #fff;
   &:hover {
-  border: 2px solid #ffeaec;
+    border: 2px solid #ffeaec;
     background-color: #ffeaec;
+  }
+}
+
+.btn--transparent-red {
+  color: #ff585d;
+  border: 2px solid #ff585d;
+  background-color: transparent;
+  &:hover {
+    color: #fff;
+    background-color: #ff585d;
   }
 }
 
 //.btn--transparent-white{
 //  background-color: transparent;
 //  border: 2px solid #fff;
-//}
-//.btn--transparent-red{
-//  background-color: transparent;
-//  border: 2px solid #FF585D;
-//  color: #FF585D;
 //}
