@@ -11,6 +11,11 @@
 
 .faq-body {
   width: 100%;
+  padding-right: 40px;
+
+  @include max(1100) {
+    padding-right: 0;
+  }
 }
 
 .faq__hashtags {
@@ -43,20 +48,13 @@
   background-color: rgba(255, 234, 236, .7);
 
   &:hover {
+    text-decoration: none;
     color: #323232;
     background-color: rgba(255, 234, 236, 1);
   }
 }
 
 //begin #FAQ ITEMS
-.faq__items {
-  padding-right: 40px;
-
-  @include max(1100) {
-    padding-right: 0;
-  }
-}
-
 .faq-item {
   display: flex;
   padding: 50px 0;
@@ -179,6 +177,7 @@
   }
 
   &:hover {
+    text-decoration: none;
     color: #323232;
     background-color: rgba(255, 234, 236, 1);
   }
