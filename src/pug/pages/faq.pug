@@ -1,0 +1,60 @@
+extends ../_template
+
+mixin faq__item(pic, hashtag, title, text)
+  .faq__item.faq-item
+    .faq-item__img
+      img(src="assets/img/faq-" + pic + ".jpg" alt="picture")
+    h3.faq-item__title.faq-item__title--mobile #{title}
+    .faq-item__rigth
+      h3.faq-item__title.faq-item__title--desktop #{title}
+      .faq-item__text #{text}
+      .faq-item__footer
+        a(href="#").faq-item__hashtag #{hashtag}
+        a(href="#").faq-item__more Читать полностью
+
+block variables
+  - var title       = 'Вопросы и ответы | 45+'
+  - var description = ''
+  - var ogtitle     = ''
+  - var ogimage     = ''
+
+  - var pageHeaderTitle = ''
+  - var breadcrumbs     = 'Вопросы и ответы'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.main--inn.faq
+      .container
+        include ../elements/breadcrumbs
+      .container
+        .faq-body
+          h2.page-title Вопросы и ответы
+          //begin faq__hashtags
+          .faq__hashtags
+            a(href="#").faq__hashtag Все о климаксе
+            a(href="#").faq__hashtag Симптомы климакса
+            a(href="#").faq__hashtag Советы
+            a(href="#").faq__hashtag Ранний климакс
+            a(href="#").faq__hashtag Лечение климакса
+          //end faq__hashtags
+
+          .faq__items
+            +faq__item('01', 'Симптомы климакса', 'Каков нормальный размер яичников у женщин при климаксе, есть ли фолликулы?', 'Насколько фатален для женского организма ранний климакс, Sputnik разбирался вместе со специалистом профилактической медицины Екатериной Степановой...')
+            +faq__item('02', 'Все о климаксе', 'Нужно ли предохраняться при климаксе, если нет месячных? Когда эт стоит делать обязательно?', 'Насколько фатален для женского организма ранний климакс, Sputnik разбирался вместе со специалистом медицины...')
+            +faq__item('01', 'Симптомы климакса', 'Каков нормальный размер яичников у женщин при климаксе, есть ли фолликулы?', 'Насколько фатален для женского организма ранний климакс, Sputnik разбирался вместе со специалистом профилактической медицины Екатериной Степановой...')
+            +faq__item('02', 'Все о климаксе', 'Нужно ли предохраняться при климаксе, если нет месячных? Когда эт стоит делать обязательно?', 'Насколько фатален для женского организма ранний климакс, Sputnik разбирался вместе со специалистом медицины...')
+            +faq__item('01', 'Симптомы климакса', 'Каков нормальный размер яичников у женщин при климаксе, есть ли фолликулы?', 'Насколько фатален для женского организма ранний климакс, Sputnik разбирался вместе со специалистом профилактической медицины Екатериной Степановой...')
+
+          .faq__footer
+            a(href="#").btn.btn--transparent-red.faq__footer-btn ЗАГРУЗИТЬ ЕЩЕ
+        include ../sections/aside
+
+      include ../sections/map-sec
+    //end content
+
+    include ../sections/footer
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA')
+    include ../sections/scripts
