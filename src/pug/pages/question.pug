@@ -1,13 +1,13 @@
 extends ../_template
 
 block variables
-  - var title       = 'Ранний климакс - кто находится в зоне риска? | 45+'
+  - var title       = 'Каков нормальный размер яичников у женщин при климаксе, есть ли фолликулы? | 45+'
   - var description = ''
   - var ogtitle     = ''
   - var ogimage     = ''
 
   - var pageHeaderTitle = ''
-  - var breadcrumbs     = 'Ранний климакс - кто находится в зоне риска?'
+  - var breadcrumbs     = 'Каков нормальный размер яичников у женщин при климаксе, есть ли фолликулы?'
 
 block content
   .main-wrap.no-js
@@ -16,12 +16,11 @@ block content
     //begin content
     main.main.main--inn.article
       .container
-        include ../elements/breadcrumbs-article
+        include ../elements/breadcrumbs-question
       .container
         //begin article-body
         .article-body
-          h2.page-title.article__page-title Ранний климакс - кто находится в зоне риска?
-
+          h2.page-title.article__page-title Каков нормальный размер яичников у женщин при климаксе, есть ли фолликулы?
           //begin article__hashtags
           .article__hashtags
             a(href="#").article__hashtag Ранний климакс
@@ -31,37 +30,9 @@ block content
             img(src="assets/img/article-img.jpg" alt="picture")
 
           p Насколько фатален для женского организма ранний климакс, Sputnik разбирался вместе со специалистом профилактической медицины Екатериной Степановой.
-          p Для многих женщин это слово звучит как приговор. Хотя <a href="#">физиологически климакс</a> – всего лишь переход в следующий, полноценный период жизни. По данным ВОЗ, этот период может начинаться примерно с 48 лет. Но все чаще на приеме у гинекологов женщине ставится диагноз раннего истощения яичников.
-
-          h3.article__subtitle Когда заканчивается эстроген
-
+          p Для многих женщин это слово звучит как приговор. Хотя физиологически климакс – всего лишь переход в следующий, полноценный период жизни. По данным ВОЗ, этот период может начинаться примерно с 48 лет. Но все чаще на приеме у гинекологов женщине ставится диагноз раннего истощения яичников.
           p Преждевременное прекращение функционирования яичников у женщин младше сорока — это ранний климакс. Если происходит полное прекращение менструаций в возрасте 35 лет, принято говорить о преждевременном климаксе.
           p В женском организме стремительно начинает снижаться уровень таких гормонов, как эстроген и прогестерон, которые вырабатываются в яичниках.
-
-          .article__blockquote
-            blockquote Эстроген необходим не только для созревания очередной яйцеклетки, но и для сохранения молодости всего организма.
-
-          p Когда яичники его больше не секретируют, овуляция становится невозможной, ответственное за прогестерон желтое тело не может быть сформировано, цикл прерывается, и у женщины начинается череда неприятных изменений в организме.
-
-          ul.article__ul-list
-            li Первый пункт списка
-            li Постепенное изменение гормонального фона
-            li Ускоренное наступление менопаузы
-
-          p На вопрос "Почему? Как так?" гинекологи обычно отвечают, что запас яйцеклеток в яичниках исчерпан, как говорится, ресурс, данный природой, израсходован, поэтому дальнейшее <a href="#">функционирование яичников</a> (выделение женских репродуктивных половых гормонов) невозможно (не имеет смысла).
-          p Так ли это на самом деле и насколько это фатально, давайте разберемся с точки зрения физиологии женского организма.
-
-          ol.article__ol-list
-            li Первый пункт списка
-            li Постепенное изменение гормонального фона
-            li Ускоренное наступление менопаузы
-
-          p При рождении в яичниках девочки находится около 2 миллионов яйцеклеток. К моменту полового созревания их количество уменьшается до 800 тысяч, а ко времени наступления первой менструации остается примерно около 350-500 тысяч.
-
-          //begin article__pluso
-          .article__pluso
-            .pluso(data-background='transparent' data-options='big,square,line,horizontal,nocounter,theme=04' data-services='vkontakte,odnoklassniki,facebook,twitter,google,moimir')
-          //end article__pluso
 
           //begin article__sm-hashtags
           .article__sm-hashtags
@@ -72,14 +43,7 @@ block content
             a(href="#").article__sm-hashtag # менопауза
           //end article__sm-hashtags
 
-          //begin article__comments
-          .article__comments
-            h3.article__comments-title комментарии
-            .article__comments-viget
-              img(src="assets/img/comments-viget.jpg" alt="picture")
-          //end article__comments
-
-          h3.article__read-more-title С этим читают
+          h3.article__read-more-title дополнительные материалы
 
           //begin article__read-more
           .article__read-more
@@ -111,7 +75,21 @@ block content
                     +svg('share')
             //end article__read-more-item
           //end article__read-more
+
+          //begin question__form
+          .question__form
+            h3.question__form-title Задать вопрос
+            form.question-form
+              .question-form__left
+                input(type='text' placeholder='Ваше имя').question-form__input
+                input(type='email' placeholder='Электронная почта').question-form__input
+              .question-form__right
+                textarea(placeholder='Ваш вопрос').question-form__textarea
+              .question-form__bottom
+                input(type='submit' value='Отправить').btn.btn--red.question-form__submit
+          //end question__form
         //end article-body
+
 
         include ../sections/aside
 
