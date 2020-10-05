@@ -6,7 +6,7 @@
 
 //elements
 //@import 'elements/burger';
-//@import 'elements/breadcrumbs';
+@import 'elements/breadcrumbs';
 //@import 'elements/pagination';
 //@import 'elements/popup';
 @import 'elements/slickBase';
@@ -14,6 +14,7 @@
 //section
 @import 'sections/header';
 @import 'sections/footer';
+@import 'sections/aside';
 @import 'sections/top';
 @import 'sections/two-banners';
 @import 'sections/welcome-sec';
@@ -24,3 +25,5 @@
 
 //pages
 @import 'pages/index';
+@import 'pages/faq';
+@import 'pages/article';

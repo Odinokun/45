@@ -1,0 +1,124 @@
+extends ../_template
+
+block variables
+  - var title       = 'Ранний климакс - кто находится в зоне риска? | 45+'
+  - var description = ''
+  - var ogtitle     = ''
+  - var ogimage     = ''
+
+  - var pageHeaderTitle = ''
+  - var breadcrumbs     = 'Ранний климакс - кто находится в зоне риска?'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.main--inn.article
+      .container
+        include ../elements/breadcrumbs-article
+      .container
+        .article-body
+          h2.page-title.article__page-title Ранний климакс - кто находится в зоне риска?
+          //begin article__hashtags
+          .article__hashtags
+            a(href="#").article__hashtag Ранний климакс
+          //end article__hashtags
+
+          .article__img
+            img(src="assets/img/article-img.jpg" alt="picture")
+
+          p Насколько фатален для женского организма ранний климакс, Sputnik разбирался вместе со специалистом профилактической медицины Екатериной Степановой.
+          p Для многих женщин это слово звучит как приговор. Хотя <a href="#">физиологически климакс</a> – всего лишь переход в следующий, полноценный период жизни. По данным ВОЗ, этот период может начинаться примерно с 48 лет. Но все чаще на приеме у гинекологов женщине ставится диагноз раннего истощения яичников.
+
+          h3.article__subtitle Когда заканчивается эстроген
+
+          p Преждевременное прекращение функционирования яичников у женщин младше сорока — это ранний климакс. Если происходит полное прекращение менструаций в возрасте 35 лет, принято говорить о преждевременном климаксе.
+          p В женском организме стремительно начинает снижаться уровень таких гормонов, как эстроген и прогестерон, которые вырабатываются в яичниках.
+
+          .article__blockquote
+            blockquote Эстроген необходим не только для созревания очередной яйцеклетки, но и для сохранения молодости всего организма.
+
+          p Когда яичники его больше не секретируют, овуляция становится невозможной, ответственное за прогестерон желтое тело не может быть сформировано, цикл прерывается, и у женщины начинается череда неприятных изменений в организме.
+
+          ul.article__ul-list
+            li Первый пункт списка
+            li Постепенное изменение гормонального фона
+            li Ускоренное наступление менопаузы
+
+          p На вопрос "Почему? Как так?" гинекологи обычно отвечают, что запас яйцеклеток в яичниках исчерпан, как говорится, ресурс, данный природой, израсходован, поэтому дальнейшее <a href="#">функционирование яичников</a> (выделение женских репродуктивных половых гормонов) невозможно (не имеет смысла).
+          p Так ли это на самом деле и насколько это фатально, давайте разберемся с точки зрения физиологии женского организма.
+
+          ol.article__ol-list
+            li Первый пункт списка
+            li Постепенное изменение гормонального фона
+            li Ускоренное наступление менопаузы
+
+          p При рождении в яичниках девочки находится около 2 миллионов яйцеклеток. К моменту полового созревания их количество уменьшается до 800 тысяч, а ко времени наступления первой менструации остается примерно около 350-500 тысяч.
+
+          .article__pluso
+            .pluso(data-background='transparent' data-options='big,square,line,horizontal,nocounter,theme=04' data-services='vkontakte,odnoklassniki,facebook,twitter,google,moimir')
+
+          .article__sm-hashtags
+            a(href="#").article__sm-hashtag # ранний климакс
+            a(href="#").article__sm-hashtag # климакс
+            a(href="#").article__sm-hashtag # 40 лет
+            a(href="#").article__sm-hashtag # яичники
+            a(href="#").article__sm-hashtag # менопауза
+
+          .article__comments
+            h3.article__comments-title комментарии
+            .article__comments-viget
+              img(src="assets/img/comments-viget.jpg" alt="picture")
+
+          h3.article__read-more-title С этим читают
+
+          .article__read-more
+            .article__read-more-item.grid-sec__item.grid-sec-item
+              a(href="#").grid-sec-item__title Норма эндометрия матки при климаксе
+              img(src="assets/img/bg-grid-07.jpg" alt="picture").grid-sec-item__img
+              .grid-sec-item__footer
+                a(href="#").grid-sec-item__hashtag Симптомы климакса
+                .grid-sec-item__footer-right
+                  a(href="#").grid-sec-item__message
+                    span 37
+                    +svg('message')
+                  a(href="#").grid-sec-item__share
+                    +svg('share')
+
+            .article__read-more-item.grid-sec__item.grid-sec-item
+              a(href="#").grid-sec-item__title Питание при климаксе: общие принципы
+              img(src="assets/img/bg-grid-02.jpg" alt="picture").grid-sec-item__img
+              .grid-sec-item__footer
+                a(href="#").grid-sec-item__hashtag Советы
+                .grid-sec-item__footer-right
+                  a(href="#").grid-sec-item__message
+                    span 37
+                    +svg('message')
+                  a(href="#").grid-sec-item__share
+                    +svg('share')
+
+        include ../sections/aside
+
+      include ../sections/map-sec
+    //end content
+
+    include ../sections/footer
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA')
+    include ../sections/scripts
+    script.
+      (function () {
+        if (window.pluso) if (typeof window.pluso.start == "function") return;
+        if (window.ifpluso == undefined) {
+          window.ifpluso = 1;
+          var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+          s.type = 'text/javascript';
+          s.charset = 'UTF-8';
+          s.async = true;
+          s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
+          var h = d[g]('body')[0];
+          h.appendChild(s);
+        }
+      })();
+
+

@@ -1,3 +1,11 @@
+.breadcrumbs {
+  margin-bottom: 35px;
+
+  @include max(840) {
+    margin-bottom: 25px;
+  }
+}
+
 .breadcrumbs__list {
   display: flex;
   flex-wrap: wrap;
@@ -9,15 +17,16 @@
   position: relative;
   list-style: none;
   &::after {
-    font-size: 14px;
+    font-size: 15px;
     margin: 0 3px 0 4px;
     content: '/';
-    color: $text;
+    color: #969696;
   }
   &:last-child {
     .breadcrumbs__link {
       text-decoration: none;
       pointer-events: none;
+      color: $text;
     }
     &::after {
       display: none;
@@ -26,10 +35,11 @@
 }
 
 .breadcrumbs__link {
-  font-size: 14px;
+  font-size: 15px;
   white-space: nowrap;
-  color: $text;
+  color: #969696;
   &:hover {
-    text-decoration: none;
+    text-decoration: underline;
+    color: #969696;
   }
 }
