@@ -135,6 +135,10 @@
     flex-direction: row;
     align-items: center;
   }
+  @include max(374) {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
 }
 
 .grid-sec-item__hashtag {
@@ -174,6 +178,9 @@
   }
   @include max(1100) {
     margin-bottom: 0;
+  }
+  @include max(374) {
+    margin-bottom: 10px;
   }
 }
 

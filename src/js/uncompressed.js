@@ -7,6 +7,7 @@ $(document).ready(function ($) {
     'article',
     'faq',
     'question',
+    'blog',
     ]);
 });
 

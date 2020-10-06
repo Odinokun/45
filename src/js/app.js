@@ -9,6 +9,9 @@ $(function() {
   // begin Slick slider
   require('./modules/slick')();
 
+  // begin masonry grid
+  require('./modules/masonry')();
+
 
   // begin phone mask
   // require('./modules/maskedinput')();

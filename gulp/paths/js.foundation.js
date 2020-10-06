@@ -9,6 +9,7 @@ module.exports = [
 
   // include Maskedinput
   // './src/vendors/maskedinput/jquery.maskedinput.min.js',
+  './src/vendors/masonry/masonry.js',
 
   // include Slick slider
   './node_modules/slick-carousel/slick/slick.min.js',
