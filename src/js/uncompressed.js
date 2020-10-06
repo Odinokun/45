@@ -8,6 +8,7 @@ $(document).ready(function ($) {
     'faq',
     'question',
     'blog',
+    'stories',
     ]);
 });
 

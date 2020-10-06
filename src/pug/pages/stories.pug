@@ -1,0 +1,78 @@
+extends ../_template
+
+mixin stories-grid__item-ava(ava, name, position, text)
+  .stories-grid__item.stories-grid-item
+    .stories-grid-item__header
+      .stories-grid-item__ava
+        img(src="assets/img/ava-" + ava + ".jpg" alt="picture")
+      .stories-grid-item__info
+        .stories-grid-item__name #{name}
+        .stories-grid-item__position #{position}
+    .stories-grid-item__text
+      p #{text}
+    .stories-grid-item__footer
+      a(href="#").stories-grid-item__read-more Читать полностью
+
+mixin stories-grid__item(name, position, text)
+  .stories-grid__item.stories-grid-item
+    .stories-grid-item__header
+      .stories-grid-item__info
+        .stories-grid-item__name #{name}
+        .stories-grid-item__position #{position}
+    .stories-grid-item__text
+      p #{text}
+    .stories-grid-item__footer
+      a(href="#").stories-grid-item__read-more Читать полностью
+
+block variables
+  - var title       = 'Живые истории | 45+'
+  - var description = ''
+  - var ogtitle     = ''
+  - var ogimage     = ''
+
+  - var pageHeaderTitle = ''
+  - var breadcrumbs     = 'Живые истории'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.main--inn.stories
+      .container
+        include ../elements/breadcrumbs
+        h2.page-title Живые истории
+
+        //begin stories__top
+        .stories__top.stories-top
+          .stories-top__banner
+            img(src="assets/img/stories-banner.jpg" alt="picture")
+            h3.stories-top__banner-title ПОДЕЛИСЬ СВОЕЙ ИСТОРИЕЙ!<br>ВЕДЬ ЭТО МОЖЕТ ПОМОЧЬ ДРУГИМ ЖЕНЩИНАМ
+
+          .stories-top__link
+              a(href="#").aside__link.aside__link--red
+                img(src="assets/img/bg-aside-03.svg" alt="picture")
+                span БЕСПЛАТНАЯ ОНЛАЙН КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА
+        //end stories__top
+      .container.container--stories-grid
+        //begin stories-grid
+        .stories-grid
+          .stories-grid__sizer
+          .stories-grid__gutter-sizer
+          +stories-grid__item-ava('01', 'Галина, 53', 'телеведущая на ТВ', 'Я – человек публичный. И климакс для меня – это, прежде всего, внешнее старение и утрата привлекательности. Не могу себе этого позволить. Лицо – моя визитная карточка, работа и благополучие. О климаксе я читала, поэтому с тревогой ждала. Когда месячные стали нерегулярными и скудными, я вооружилась БАДами. И в течение двух лет они меня спасали – я забыла о климаксе, цикл восстановился. Но БАДы – дорогое удовольствие...')
+          +stories-grid__item-ava('02', 'анна, 47', 'администратор', 'Я – человек публичный. И климакс для меня – это, прежде всего, внешнее старение и утрата привлекательности. Не могу себе этого позволить. Лицо – моя визитная карточка, работа и благополучие. О климаксе я читала, поэтому с тревогой ждала. Когда месячные стали нерегулярными и скудными, я вооружилась БАДами. И в течение двух лет они меня спасали – я забыла о климаксе, цикл восстановился. Но БАДы – дорогое удовольствие. В какой-то момент мне пришлось уменьшить приём, а потом и вовсе отказаться от них. И тут началось! Приливы, бессонница, проблемы со здоровьем. Месячные скакали, а потом и вовсе пропали.')
+          +stories-grid__item('Екатерина, 50', 'продавщица', 'Я – человек публичный. И климакс для меня – это, прежде всего, внешнее старение и утрата привлекательности. Не могу себе этого позволить. Лицо – моя визитная карточка, работа и благополучие.')
+          +stories-grid__item-ava('01', 'Галина, 53', 'телеведущая на ТВ', 'Я – человек публичный. И климакс для меня – это, прежде всего, внешнее старение и утрата привлекательности. Не могу себе этого позволить. Лицо – моя визитная карточка, работа и благополучие. О климаксе я читала, поэтому с тревогой ждала. Когда месячные стали нерегулярными и скудными, я вооружилась БАДами. И в течение двух лет они меня спасали – я забыла о климаксе, цикл восстановился. Но БАДы – дорогое удовольствие...')
+          +stories-grid__item('Екатерина, 50', 'продавщица', 'Я – человек публичный. И климакс для меня – это, прежде всего, внешнее старение и утрата привлекательности. Не могу себе этого позволить. Лицо – моя визитная карточка, работа и благополучие.')
+          +stories-grid__item('Екатерина, 50', 'продавщица', 'Я – человек публичный. И климакс для меня – это, прежде всего, внешнее старение и утрата привлекательности. Не могу себе этого позволить. Лицо – моя визитная карточка, работа и благополучие.')
+        //end stories-grid
+
+        .stories-grid-footer
+          a(href="#").btn.btn--transparent-red.stories-grid-footer__btn ЗАГРУЗИТЬ ЕЩЕ
+
+      include ../sections/map-sec
+    //end content
+
+    include ../sections/footer
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA')
+    include ../sections/scripts
