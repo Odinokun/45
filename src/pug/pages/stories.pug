@@ -43,6 +43,7 @@ block content
         include ../elements/breadcrumbs
         h2.page-title Живые истории
 
+      .container.container--stories-top
         //begin stories__top
         .stories__top.stories-top
           .stories-top__banner
@@ -67,9 +68,12 @@ block content
           +stories-grid__item('Екатерина, 50', 'продавщица', 'Я – человек публичный. И климакс для меня – это, прежде всего, внешнее старение и утрата привлекательности. Не могу себе этого позволить. Лицо – моя визитная карточка, работа и благополучие.')
         //end stories-grid
 
+        //begin stories-grid-footer
         .stories-grid-footer
           a(href="#").btn.btn--transparent-red.stories-grid-footer__btn ЗАГРУЗИТЬ ЕЩЕ
+        //end stories-grid-footer
 
+      include ../sections/stories-form
       include ../sections/map-sec
     //end content
 

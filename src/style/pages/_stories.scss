@@ -1,12 +1,6 @@
 .stories {
   .container {
-    @include max(1023) {
-      padding-right: 30px;
-      padding-left: 30px;
-    }
-    @include max(540) {
-      padding: 0 16px;
-    }
+
   }
 }
 
@@ -86,6 +80,7 @@
 }
 
 //begin #GRID
+.container--stories-top,
 .container--stories-grid {
   @include max(1023) {
     padding-right: 30px;
