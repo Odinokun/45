@@ -1,0 +1,209 @@
+.doctors-header {
+  display: flex;
+  margin-bottom: 70px;
+}
+
+.doctors-header__select-wrap {
+  position: relative;
+  width: calc(50% - 60px);
+  margin-right: 60px;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    content: '';
+    pointer-events: none;
+    border-radius: 50%;
+    background-color: #ff585d;
+    background-image: url('../img/arr-down.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @include max(680) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.doctors-header__select {
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 20px;
+  width: 100%;
+  max-width: 580px;
+  height: 80px;
+  padding: 0 90px 0 40px;
+  text-transform: uppercase;
+  color: #969696;
+  border: 2px solid #ff585d;
+  border-radius: 40px !important;
+  background-color: #fff;
+
+  @include max(680) {
+    height: 60px;
+    padding: 0 50px 0 25px;
+  }
+}
+
+.doctors-header__text {
+  font-weight: 300;
+  line-height: 1.38;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  color: #323232;
+
+  @include responsive-font(26, 17);
+}
+
+//begin #DOCTORS
+.doctors__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include max(540) {
+    justify-content: center;
+  }
+}
+
+.doctors__item {
+  display: flex;
+  overflow: hidden;
+  width: calc(50% - 20px);
+  margin-bottom: 40px;
+  border: 1px solid #e6e6e6;
+  border-radius: 30px;
+  background: #fff;
+
+  @include max(1400) {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+  @include max(1100) {
+    width: 100%;
+  }
+  @include max(540) {
+    flex-direction: column;
+    max-width: 400px;
+  }
+}
+
+.doctors-item__ava {
+  flex: none;
+  width: 40%;
+
+  @include max(540) {
+    width: 100%;
+    height: 250px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 0;
+  }
+}
+
+.doctors-item__info {
+  padding: 30px 35px 30px 30px;
+
+  @include max(1400) {
+    padding: 25px;
+  }
+}
+
+.doctors-item__name {
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #323232;
+
+  @include responsive-font(25, 20);
+}
+
+.doctors-item__position {
+  font-weight: 300;
+  line-height: 1.53;
+  margin-bottom: 20px;
+  color: #323232;
+
+  @include responsive-font(19, 17);
+}
+
+.doctors-item__adress {
+  display: flex;
+  margin-bottom: 10px;
+  span {
+    font-size: 17px;
+    color: #ff585d;
+
+    text-decoration-line: underline;
+    &:hover {
+      text-decoration: none;
+      color: #ff585d;
+    }
+  }
+}
+
+.doctors-item__contacts {
+  display: flex;
+
+  span {
+    font-size: 17px;
+    color: #ff585d;
+
+    text-decoration-line: underline;
+    &:hover {
+      text-decoration: none;
+      color: #ff585d;
+    }
+  }
+}
+
+.doctors-item__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  transform: translateY(2px);
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+//end #DOCTORS
+
+.doctors__footer {
+  display: flex;
+  justify-content: center;
+  padding: 35px 0 50px 0;
+
+  @include max(1100) {
+    padding: 35px 0 0 0;
+  }
+  @include max(1023) {
+    padding: 15px 0 0 0;
+  }
+  @include max(767) {
+    padding: 15px 0 0 0;
+  }
+}
+
+.doctors__footer-btn {
+  width: 100%;
+  max-width: 400px;
+
+  @include max(540) {
+    max-width: 100%;
+  }
+}
