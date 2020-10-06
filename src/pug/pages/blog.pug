@@ -1,0 +1,91 @@
+extends ../_template
+
+mixin grid-sec__item(className, pic, countMessaae, hashtag, title)
+  li( class="blog-grid__item blog-grid-item blog-grid-item--" + className)
+    a(href="#").grid-sec-item__title #{title}
+    img(src="assets/img/bg-grid-" + pic + ".jpg" alt="picture").grid-sec-item__img
+    .grid-sec-item__footer
+      a(href="#").grid-sec-item__hashtag #{hashtag}
+      .grid-sec-item__footer-right
+        a(href="#").grid-sec-item__message
+          span #{countMessaae}
+          +svg('message')
+        a(href="#").grid-sec-item__share
+          +svg('share')
+
+block variables
+  - var title       = 'Полезные статьи | 45+'
+  - var description = ''
+  - var ogtitle     = ''
+  - var ogimage     = ''
+
+  - var pageHeaderTitle = ''
+  - var breadcrumbs     = 'Полезные статьи'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.main--inn.blog
+      .container
+        include ../elements/breadcrumbs
+      .container
+        h2.page-title Полезные статьи
+
+        //begin faq__hashtags
+        .faq__hashtags
+          a(href="#").faq__hashtag Все о климаксе
+          a(href="#").faq__hashtag Симптомы климакса
+          a(href="#").faq__hashtag Советы
+          a(href="#").faq__hashtag Ранний климакс
+          a(href="#").faq__hashtag Лечение климакса
+        //end faq__hashtags
+
+      .container.container--blog-grid
+        //begin blog-grid
+        .blog-grid
+          .blog-grid__sizer
+          .blog-grid__gutter-sizer
+
+          +grid-sec__item('600', '01', '254', 'Симптомы климакса', 'Почему болит грудь при климаксе: причины и лечение')
+          +grid-sec__item('800', '03', '9',  'Ранний климакс', 'Что делать, если до 40 появились признаки менопаузы?')
+
+          .blog-grid__item.blog-grid-item.blog-grid-item--400.blog-grid-item--ex
+            a(href="#").aside__link.aside__link--pink
+              img(src="assets/img/bg-aside-01.svg" alt="picture")
+              span Прочитайте живые истории
+
+          +grid-sec__item('800', '05', '9', 'Советы', 'Неприятный запах при климаксе у женщин: от чего появляется, как избавиться')
+          +grid-sec__item('400', '07', '37',   'Симптомы климакса', 'Норма эндометрия матки при климаксе')
+          +grid-sec__item('400', '08', '37',   'Симптомы климакса', 'Норма эндометрия матки при климаксе')
+          +grid-sec__item('600', '04', '254',  'Советы', 'Нужно ли предохраняться при климаксе: как правильно это делать')
+          +grid-sec__item('600', '06', '254', 'Симптомы климакса', 'Почему болит грудь при климаксе: причины и лечение')
+          +grid-sec__item('400', '02', '37',   'Советы', 'Питание при климаксе: общие принципы')
+        //end blog-grid
+
+        .blog-grid-footer
+          a(href="#").btn.btn--transparent-red.blog-grid-footer__btn ЗАГРУЗИТЬ ЕЩЕ
+
+      include ../sections/map-sec
+    //end content
+
+    include ../sections/footer
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA')
+    include ../sections/scripts
+    script.
+      (function () {
+        if (window.pluso) if (typeof window.pluso.start == "function") return;
+        if (window.ifpluso == undefined) {
+          window.ifpluso = 1;
+          var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+          s.type = 'text/javascript';
+          s.charset = 'UTF-8';
+          s.async = true;
+          s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
+          var h = d[g]('body')[0];
+          h.appendChild(s);
+        }
+      })();
+
+
