@@ -1,0 +1,70 @@
+extends ../_template
+
+mixin doctors__item(pic, name)
+  .doctors__item.doctors-item
+    .doctors-item__ava
+      img(src="assets/img/doctor-" + pic + ".jpg" alt="picture")
+    .doctors-item__info
+      .doctors-item__name #{name}
+      .doctors-item__position акушер-гинеколог, врач высшей категории
+      a(href="#").doctors-item__adress
+        .doctors-item__icon
+          img(src="assets/img/adress.svg" alt="picture")
+        span Центр молекулярной медицины
+      a(href="#").doctors-item__contacts
+        .doctors-item__icon
+          img(src="assets/img/email.svg" alt="picture")
+        span Посмотреть контакты
+
+block variables
+  - var title       = 'Пройти обследование | 45+'
+  - var description = ''
+  - var ogtitle     = ''
+  - var ogimage     = ''
+
+  - var pageHeaderTitle = ''
+  - var breadcrumbs     = 'Пройти обследование'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.main--inn.doctors
+      .container
+        include ../elements/breadcrumbs
+        h2.page-title Пройти обследование
+
+        //begin doctors-header
+        .doctors__header.doctors-header
+          .doctors-header__select-wrap
+            select.doctors-header__select
+              option Город
+              option Город 1
+              option Город 2
+              option Город 3
+          .doctors-header__text
+            span Здесь вы увидите специалистов, которые имеют обширный опыт лечения менопаузы
+        //end doctors-header
+
+        //begin doctors__list
+        .doctors__list
+          +doctors__item('01', 'Иванов николай Иванович')
+          +doctors__item('02', 'овсиенко Иван петрович')
+          +doctors__item('01', 'Иванов николай Иванович')
+          +doctors__item('02', 'овсиенко Иван петрович')
+          +doctors__item('01', 'Иванов николай Иванович')
+          +doctors__item('02', 'овсиенко Иван петрович')
+          +doctors__item('01', 'Иванов николай Иванович')
+          +doctors__item('02', 'овсиенко Иван петрович')
+        //end doctors__list
+
+        .doctors__footer
+          a(href="#").btn.btn--transparent-red.doctors__footer-btn ЗАГРУЗИТЬ ЕЩЕ
+
+      include ../sections/map-sec
+    //end content
+
+    include ../sections/footer
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA')
+    include ../sections/scripts

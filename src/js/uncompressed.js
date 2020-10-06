@@ -9,6 +9,7 @@ $(document).ready(function ($) {
     'question',
     'blog',
     'stories',
+    'doctors',
     ]);
 });
 
