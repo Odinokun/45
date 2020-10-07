@@ -1,0 +1,24 @@
+mixin doctor-reviews-slider__item(numb)
+  a(href="#").doctor-reviews-slider__item
+    .doctor-reviews-slider__ava
+      img(src="assets/img/review-01.jpg" alt="picture")
+    .doctor-reviews-slider__info
+      .doctor-reviews-slider__name #{numb}
+      .doctor-reviews-slider__text
+        p Я – человек публичный. И климакс для меня – это, прежде всего, внешнее старение и утрата привлекательности. Не могу себе этого позволить. Лицо – моя визитная карточка, работа и благополучие. О климаксе я читала, поэтому с тревогой ждала. Когда месячные стали нерегулярными и скудными, я вооружилась БАДами. И в течение двух лет они меня спасали – я забыла о климаксе, цикл восстановился. Но БАДы – дорогое удовольствие...
+
+//begin doctor__reviews
+.doctor__reviews.doctor-reviews
+  .container
+    h2.doctor-reviews__title Отзывы пациентов
+
+    //begin doctor-reviews__slider
+    .doctor-reviews__slider.doctor-reviews-slider#doctor-reviews-slider
+      +doctor-reviews-slider__item('Галина, 53')
+      +doctor-reviews-slider__item('Ольга, 44')
+      +doctor-reviews-slider__item('Елена, 55')
+    //end doctor-reviews__slider
+
+    .doctor-reviews__footer
+      a(href="#").btn.btn--transparent-red.doctor-reviews__btn оставить отзыв
+//end doctor__reviews

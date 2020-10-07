@@ -1,0 +1,30 @@
+extends ../_template
+
+block variables
+  - var title       = 'Иванов Hиколай Иванович | 45+'
+  - var description = ''
+  - var ogtitle     = ''
+  - var ogimage     = ''
+
+  - var pageHeaderTitle = ''
+  - var breadcrumbs     = 'Иванов Hиколай Иванович'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.main--inn.doctor
+      .container
+        include ../sections/doctor-top
+
+      include ../sections/doctor-map
+      include ../sections/doctor-reviews
+
+      include ../sections/map-sec
+    //end content
+
+    include ../sections/footer
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA')
+    include ../sections/scripts
+    script(src='assets/js/doctor-map.js')
