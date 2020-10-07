@@ -143,12 +143,17 @@ svg {
 }
 
 .main {
+  background-color: #fffcfc;
+
   flex-grow: 1;
-  background-color: #FFFCFC;
 }
 
 .main--inn {
   padding-top: 230px;
+
+  @include max(1600) {
+    padding-top: 100px;
+  }
 }
 
 .container-lg,
@@ -265,7 +270,12 @@ svg {
   }
 }
 
-//.btn--transparent-white{
-//  background-color: transparent;
-//  border: 2px solid #fff;
-//}
+.btn--transparent-white {
+  border: 2px solid #fff;
+  background-color: transparent;
+  &:hover {
+    color: #ff585d;
+    border: 2px solid #ffeaec;
+    background-color: #ffeaec;
+  }
+}

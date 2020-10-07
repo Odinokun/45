@@ -12,6 +12,12 @@ $(function() {
   // begin masonry grid
   require('./modules/masonry')();
 
+  // begin language switcher
+  require('./modules/lang')();
+
+  // begin burger
+  require('./modules/burger')();
+
 
   // begin phone mask
   // require('./modules/maskedinput')();
