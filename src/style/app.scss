@@ -23,6 +23,9 @@
 @import 'sections/question-sec';
 @import 'sections/map-sec';
 @import 'sections/stories-form';
+@import 'sections/doctor-top';
+@import 'sections/doctor-map';
+@import 'sections/doctor-reviews';
 
 //pages
 @import 'pages/index';
@@ -32,3 +35,4 @@
 @import 'pages/blog';
 @import 'pages/stories';
 @import 'pages/doctors';
+@import 'pages/doctor';
