@@ -1,12 +1,22 @@
 .doctors-header {
   display: flex;
   margin-bottom: 70px;
+
+  @include max(1023) {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
 }
 
 .doctors-header__select-wrap {
   position: relative;
   width: calc(50% - 60px);
   margin-right: 60px;
+
+  @include max(1023) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
   &::before {
     position: absolute;
     top: 0;
@@ -42,6 +52,9 @@
   border-radius: 40px !important;
   background-color: #fff;
 
+  @include max(1023) {
+    max-width: 100%;
+  }
   @include max(680) {
     height: 60px;
     padding: 0 50px 0 25px;
@@ -57,6 +70,9 @@
   color: #323232;
 
   @include responsive-font(26, 17);
+  @include max(1023) {
+    width: 100%;
+  }
 }
 
 //begin #DOCTORS

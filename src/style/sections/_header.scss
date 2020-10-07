@@ -1,0 +1,293 @@
+.header {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 0;
+
+  @include max(1600) {
+    position: fixed;
+    padding: 15px 0;
+    background-color: #fffcfc;
+  }
+  &::before {
+    position: absolute;
+    z-index: 101;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    margin: auto;
+    content: '';
+    background-color: #fffcfc;
+
+    @include max(1600) {
+      display: block;
+    }
+  }
+  .container-lg {
+    display: flex;
+    align-items: center;
+  }
+}
+
+//begin #logo
+.header__logo {
+  z-index: 102;
+  flex: none;
+  margin-right: 15px;
+
+  @include max(1600) {
+    width: 46px;
+  }
+  @include max(680) {
+    width: 35px;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+//end #logo
+
+.header__mobile-menu {
+  z-index: 102;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  transition: $transition;
+
+  @include max(1600) {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 96px 16px 16px 16px;
+    transform: translateY(-100vh);
+    background-color: #ffeaec;
+    &.active {
+      transform: translateY(0);
+    }
+  }
+  @include max(680) {
+    padding: 86px 16px 16px 16px;
+  }
+}
+
+//begin #menu
+.header-menu {
+  width: 100%;
+}
+
+.header-menu__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  @include max(1600) {
+    flex-direction: column;
+    padding: 0 0 30px 0;
+  }
+}
+
+.header-menu__item {
+  padding: 10px 20px;
+  list-style: none;
+
+  @include max(1600) {
+    padding: 18px 0;
+  }
+  @include max(680) {
+    padding: 12px 0;
+  }
+}
+
+.header-menu__link {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  color: #fff;
+
+  @include max(1600) {
+    font-size: 30px;
+    color: #323232;
+  }
+  @include max(680) {
+    font-size: 20px;
+  }
+  &.active,
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+
+    @include max(1600) {
+      color: #323232;
+    }
+    &::before {
+      width: 100%;
+    }
+  }
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    margin: auto;
+    content: '';
+    transition: $transition;
+    background-color: #fff;
+
+    @include max(1600) {
+      bottom: -5px;
+      background-color: #323232;
+    }
+  }
+}
+
+//end #menu
+
+//begin #BTNS
+.header__btns {
+  display: flex;
+
+  @include max(1600) {
+    flex-direction: column;
+  }
+}
+
+.header__btn {
+  font-size: 15px;
+  width: 100%;
+  max-width: 250px;
+  min-height: 60px;
+  margin-right: 20px;
+
+  @include max(1600) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.header__btn--white {
+  @include max(1600) {
+    color: #323232;
+    border-color: #323232;
+    &:hover {
+      color: #323232;
+      border-color: #323232;
+      background-color: #fff;
+    }
+  }
+}
+
+//end #BTNS
+
+//begin #LANG
+.lang {
+  z-index: 102;
+  display: flex;
+
+  @include max(1600) {
+    margin-left: auto;
+  }
+}
+
+.lang__item {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 13px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #fff;
+  border-right: 1px solid rgba(255, 255, 255, .5);
+
+  @include max(1600) {
+    color: #323232;
+    border-right: 1px solid #cac9c9;
+  }
+  &:last-child {
+    padding-right: 0;
+    border: none;
+  }
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+  &.active {
+    pointer-events: none;
+    color: #ff808b;
+  }
+}
+
+//end #LANG
+
+//begin #HEADER INN
+.header--inn {
+  //begin #MENU
+  .header-menu__link {
+    color: #323232;
+
+    &.active,
+    &:hover {
+      color: #323232;
+    }
+    &::before {
+      background-color: #323232;
+    }
+  }
+  //end #MENU
+
+  //begin #BTNS
+  .header__btn--white {
+    color: #323232;
+    border-color: #323232;
+
+    &:hover {
+      color: #323232;
+      background-color: #ffeaec;
+
+      @include max(1600) {
+        border-color: #323232;
+        background-color: #fff;
+      }
+    }
+  }
+  //end #BTNS
+
+  //begin #LANG
+  .lang__item {
+    color: #323232;
+    border-right: 1px solid #cac9c9;
+
+    &:last-child {
+      border: none;
+    }
+    &:hover {
+      color: #323232;
+    }
+    &.active {
+      color: #ff808b;
+    }
+  }
+  //end #LANG
+}
+
+//end #HEADER INN
