@@ -18,11 +18,14 @@ $(function() {
   // begin burger
   require('./modules/burger')();
 
+  // begin jqueryUI
+  require('./modules/jqueryUI')();
+
 
   // begin phone mask
   // require('./modules/maskedinput')();
 
   // begin Popup
-  // require('./modules/popup')();
+  require('./modules/popup')();
 
 });

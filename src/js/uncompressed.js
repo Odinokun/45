@@ -10,7 +10,8 @@ $(document).ready(function ($) {
     'blog',
     'stories',
     'doctors',
-    'doctor'
+    'doctor',
+    'test'
     ]);
 });
 
