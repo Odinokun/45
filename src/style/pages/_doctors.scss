@@ -10,6 +10,7 @@
 
 .doctors-header__select-wrap {
   position: relative;
+  overflow: hidden;
   width: calc(50% - 60px);
   margin-right: 60px;
 
@@ -45,19 +46,20 @@
   width: 100%;
   max-width: 580px;
   height: 80px;
-  padding: 0 90px 0 40px;
+  padding: 0 90px 0 40px !important;
   text-transform: uppercase;
   color: #969696;
   border: 2px solid #ff585d;
   border-radius: 40px !important;
-  background-color: #fff;
+  background-color: #fff !important;
 
+  -webkit-appearance: none;
   @include max(1023) {
     max-width: 100%;
   }
   @include max(680) {
     height: 60px;
-    padding: 0 50px 0 25px;
+    padding: 0 50px 0 25px !important;
   }
 }
 

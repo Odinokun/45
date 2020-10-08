@@ -161,18 +161,12 @@
 .article__comments-title {
   font-size: 30px;
   font-weight: 500;
+  margin-bottom: 30px;
   line-height: 1.5;
   text-transform: uppercase;
   color: #323232;
 
   @include responsive-font(30, 25);
-}
-
-.article__comments-viget {
-  img {
-    display: block;
-    width: 100%;
-  }
 }
 
 .article__read-more-title {

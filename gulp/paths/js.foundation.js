@@ -5,7 +5,8 @@ module.exports = [
   './node_modules/svg4everybody/dist/svg4everybody.min.js',
 
   // include jQuery UI
-  // './src/vendors/jquery-ui/jquery-ui.min.js',
+  './src/vendors/jquery-ui/jquery-ui.min.js',
+  './node_modules/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js',
 
   // include Maskedinput
   // './src/vendors/maskedinput/jquery.maskedinput.min.js',
