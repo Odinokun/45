@@ -40,7 +40,7 @@
 .grid-sec-item {
   position: relative;
   display: flex;
-  overflow: hidden;
+  //overflow: hidden;
   flex-direction: column;
   justify-content: flex-end;
   min-height: 400px;
@@ -116,9 +116,16 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
   transition: $transition;
+  img {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+  }
 }
 
 .grid-sec-item__footer {
@@ -126,6 +133,7 @@
   z-index: 1;
   display: flex;
   align-items: center;
+  margin-bottom: -15px;
 
   @include max(1400) {
     flex-direction: column-reverse;
@@ -214,10 +222,16 @@
 }
 
 .grid-sec-item__share {
+  position: relative;
   flex: none;
+  padding: 15px 0;
   &:hover {
     svg {
       fill: #ff808b;
+    }
+    .tooltip {
+      pointer-events: auto;
+      opacity: 1;
     }
   }
   svg {

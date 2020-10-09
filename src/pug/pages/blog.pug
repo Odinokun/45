@@ -3,15 +3,17 @@ extends ../_template
 mixin grid-sec__item(className, pic, countMessaae, hashtag, title)
   li( class="blog-grid__item blog-grid-item blog-grid-item--" + className)
     a(href="#").grid-sec-item__title #{title}
-    img(src="assets/img/bg-grid-" + pic + ".jpg" alt="picture").grid-sec-item__img
+    .grid-sec-item__img
+      img(src="assets/img/bg-grid-" + pic + ".jpg" alt="picture")
     .grid-sec-item__footer
       a(href="#").grid-sec-item__hashtag #{hashtag}
       .grid-sec-item__footer-right
         a(href="#").grid-sec-item__message
           span #{countMessaae}
           +svg('message')
-        a(href="#").grid-sec-item__share
+        .grid-sec-item__share
           +svg('share')
+          include ../elements/tooltip
 
 block variables
   - var title       = 'Полезные статьи | 45+'
@@ -73,3 +75,17 @@ block content
     include ../sections/footer
     script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA')
     include ../sections/scripts
+    script.
+      (function () {
+        if (window.pluso) if (typeof window.pluso.start == "function") return;
+        if (window.ifpluso == undefined) {
+          window.ifpluso = 1;
+          var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+          s.type = 'text/javascript';
+          s.charset = 'UTF-8';
+          s.async = true;
+          s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
+          var h = d[g]('body')[0];
+          h.appendChild(s);
+        }
+      })();

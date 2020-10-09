@@ -81,29 +81,33 @@ block content
             //begin article__read-more-item
             .article__read-more-item.grid-sec__item.grid-sec-item
               a(href="#").grid-sec-item__title Норма эндометрия матки при климаксе
-              img(src="assets/img/bg-grid-07.jpg" alt="picture").grid-sec-item__img
+              .grid-sec-item__img
+                img(src="assets/img/bg-grid-07.jpg" alt="picture")
               .grid-sec-item__footer
                 a(href="#").grid-sec-item__hashtag Симптомы климакса
                 .grid-sec-item__footer-right
                   a(href="#").grid-sec-item__message
                     span 37
                     +svg('message')
-                  a(href="#").grid-sec-item__share
+                  .grid-sec-item__share
                     +svg('share')
+                    include ../elements/tooltip
             //end article__read-more-item
 
             //begin article__read-more-item
             .article__read-more-item.grid-sec__item.grid-sec-item
               a(href="#").grid-sec-item__title Питание при климаксе: общие принципы
-              img(src="assets/img/bg-grid-02.jpg" alt="picture").grid-sec-item__img
+              .grid-sec-item__img
+                img(src="assets/img/bg-grid-02.jpg" alt="picture")
               .grid-sec-item__footer
                 a(href="#").grid-sec-item__hashtag Советы
                 .grid-sec-item__footer-right
                   a(href="#").grid-sec-item__message
                     span 37
                     +svg('message')
-                  a(href="#").grid-sec-item__share
+                  .grid-sec-item__share
                     +svg('share')
+                    include ../elements/tooltip
             //end article__read-more-item
           //end article__read-more
         //end article-body

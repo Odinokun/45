@@ -1,16 +1,17 @@
 mixin grid-sec__item(className, pic, countMessaae, hashtag, title)
   li( class="grid-sec__item grid-sec-item grid-sec-item--" + className)
     a(href="#").grid-sec-item__title #{title}
-    img(src="assets/img/bg-grid-" + pic + ".jpg" alt="picture").grid-sec-item__img
+    .grid-sec-item__img
+      img(src="assets/img/bg-grid-" + pic + ".jpg" alt="picture")
     .grid-sec-item__footer
       a(href="#").grid-sec-item__hashtag #{hashtag}
       .grid-sec-item__footer-right
         a(href="#").grid-sec-item__message
           span #{countMessaae}
           +svg('message')
-        a(href="#").grid-sec-item__share
+        .grid-sec-item__share
           +svg('share')
-
+          include ../elements/tooltip
 //begin grid-sec
 .grid-sec
   .container
