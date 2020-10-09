@@ -13,14 +13,21 @@
 .popup {
   position: fixed;
   z-index: 1000;
-  border-radius: 30px;
-  overflow: auto;
   top: 50%;
   left: 50%;
   display: none;
+  overflow: auto;
   width: 95%;
   max-height: 95vh;
   transform: translate(-50%, -50%);
+  border-radius: 30px;
   background-color: #fff;
   box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
+  .stories-form__input {
+    width: calc(50% - 20px);
+
+    @include max(1023) {
+      width: 100%;
+    }
+  }
 }
