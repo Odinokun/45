@@ -21,10 +21,6 @@ $(function() {
   // begin jqueryUI
   require('./modules/jqueryUI')();
 
-
-  // begin phone mask
-  // require('./modules/maskedinput')();
-
   // begin Popup
   require('./modules/popup')();
 

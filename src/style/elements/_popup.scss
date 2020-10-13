@@ -21,7 +21,7 @@
   max-height: 95vh;
   transform: translate(-50%, -50%);
   border-radius: 30px;
-  background-color: #fff;
+  background-color: #936;
   box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
   .stories-form__input {
     width: calc(50% - 20px);
@@ -31,3 +31,92 @@
     }
   }
 }
+
+.popup--sm {
+  max-width: 800px;
+}
+
+//begin #STORIES POPUP
+.popup-stories {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 40px;
+  border-radius: 30px;
+  background-color: #fff;
+
+  @include max(540) {
+    padding: 35px 25px;
+  }
+}
+
+.form-sec .popup__close svg {
+  fill: #fff !important;
+}
+
+.popup__close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  @include max(540) {
+    top: 20px;
+    right: 20px;
+  }
+  &:hover {
+    svg {
+      fill: $brand;
+    }
+  }
+  svg {
+    fill: #323232;
+    width: 20px;
+    height: 20px;
+    transition: $transition;
+  }
+}
+
+.popup-stories__header {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.popup-stories__ava {
+  overflow: hidden;
+  width: 70px;
+  height: 70px;
+  margin-right: 25px;
+  border-radius: 50%;
+}
+
+.popup-stories__name {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #323232;
+}
+
+.popup-stories__position {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  color: #323232;
+}
+
+.popup-stories__text {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.53;
+  color: #323232;
+}
+
+//end #STORIES POPUP

@@ -1,12 +1,90 @@
 //begin popup
 .popup__layer#popup__layer
 
+//begin popup-registration
 .popup#popup-registration
-  include ../sections/form-sec
+  //begin form-sec
+  .form-sec
+    .popup__close
+      +svg('close')
+    .container
+      h2.form-sec__title ВЫ можете пройти ОНЛАЙН-КОНСУЛЬТАЦИЮ ЭКСПЕРТА БЕСПЛАТНО ПРЯМО СЕЙЧАС
+      form.form-sec__form
+        input(type='text' placeholder='Ваше имя').form-sec__input
+        input(type='text' placeholder='Телефон').form-sec__input
+        input(type='submit' value='Отправить запрос').btn.btn--white.form-sec__submit
+        .form-sec__add-file
+          input(type='file')
+          +svg('binder')
+          span Прикрепите все анализы
+  //end form-sec
+//end popup-registration
 
+//begin popup-review
 .popup#popup-review
-  include ../sections/form-review
+  //begin stories-form
+  .stories-form
+    .popup__close
+      +svg('close')
+    .container
+      h2.stories-form__title поделись своей историей
+      form.stories-form__form
+        input(type='text' placeholder='Ваше имя').stories-form__input
+        input(type='text' placeholder='Возраст').stories-form__input
+        textarea(placeholder='Ваш отзыв').stories-form__textarea
+        .stories-form__footer
+          .stories-form__add-file
+            input(type='file')
+            +svg('binder')
+            span Прикрепите фотографию
+          input(type='submit' value='Поделиться').btn.btn--red.stories-form__submit
+  //end stories-form
 
+//end popup-review
+
+//begin popup-appointment
 .popup#popup-appointment
-  include ../sections/form-appointment
+  //begin form-sec
+  .form-sec
+    .popup__close
+      +svg('close')
+    .container
+      h2.form-sec__title Запись на прием
+      form.form-sec__form
+        input(type='text' placeholder='Ваше имя').form-sec__input
+        input(type='text' placeholder='Телефон').form-sec__input
+        input(type='submit' value='Записаться').btn.btn--white.form-sec__submit
+  //end form-sec
+//end popup-appointment
+
+//begin popup-stories-01
+.popup.popup--sm#popup-stories-01
+  .popup__stories.popup-stories
+    .popup__close
+      +svg('close')
+    .popup-stories__header
+      .popup-stories__ava
+        img(src="assets/img/ava-01.jpg" alt="picture")
+      .popup-stories__info
+        .popup-stories__name Галина, 53
+        .popup-stories__position телеведущая на ТВ
+    .popup-stories__text
+      p Я – человек публичный. И климакс для меня – это, прежде всего, внешнее старение и утрата привлекательности. Не могу себе этого позволить. Лицо – моя визитная карточка, работа и благополучие. О климаксе я читала, поэтому с тревогой ждала. Когда месячные стали нерегулярными и скудными, я вооружилась БАДами. И в течение двух лет они меня спасали – я забыла о климаксе, цикл восстановился. Но БАДы – дорогое удовольствие...
+      p Я – человек публичный. И климакс для меня – это, прежде всего, внешнее старение и утрата привлекательности. Не могу себе этого позволить. Лицо – моя визитная карточка, работа и благополучие. О климаксе я читала, поэтому с тревогой ждала. Когда месячные стали нерегулярными и скудными, я вооружилась БАДами. И в течение двух лет они меня спасали – я забыла о климаксе, цикл восстановился. Но БАДы – дорогое удовольствие...
+//end popup-stories-01
+
+//begin popup-stories-02
+.popup.popup--sm#popup-stories-02
+  .popup__stories.popup-stories
+    .popup__close
+      +svg('close')
+    .popup-stories__header
+      .popup-stories__info
+        .popup-stories__name Галина, 53
+        .popup-stories__position телеведущая на ТВ
+    .popup-stories__text
+      p Я – человек публичный. И климакс для меня – это, прежде всего, внешнее старение и утрата привлекательности. Не могу себе этого позволить. Лицо – моя визитная карточка, работа и благополучие. О климаксе я читала, поэтому с тревогой ждала. Когда месячные стали нерегулярными и скудными, я вооружилась БАДами. И в течение двух лет они меня спасали – я забыла о климаксе, цикл восстановился. Но БАДы – дорогое удовольствие...
+      p Я – человек публичный. И климакс для меня – это, прежде всего, внешнее старение и утрата привлекательности. Не могу себе этого позволить. Лицо – моя визитная карточка, работа и благополучие. О климаксе я читала, поэтому с тревогой ждала. Когда месячные стали нерегулярными и скудными, я вооружилась БАДами. И в течение двух лет они меня спасали – я забыла о климаксе, цикл восстановился. Но БАДы – дорогое удовольствие...
+//end popup-stories-02
+
 //end popup

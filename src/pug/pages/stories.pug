@@ -11,7 +11,7 @@ mixin stories-grid__item-ava(ava, name, position, text)
     .stories-grid-item__text
       p #{text}
     .stories-grid-item__footer
-      a(href="#").stories-grid-item__read-more Читать полностью
+      a(href="#" data-popup='popup-stories-01').stories-grid-item__read-more.popup-open Читать полностью
 
 mixin stories-grid__item(name, position, text)
   .stories-grid__item.stories-grid-item
@@ -22,7 +22,7 @@ mixin stories-grid__item(name, position, text)
     .stories-grid-item__text
       p #{text}
     .stories-grid-item__footer
-      a(href="#").stories-grid-item__read-more Читать полностью
+      a(href="#" data-popup='popup-stories-02').stories-grid-item__read-more.popup-open Читать полностью
 
 block variables
   - var title       = 'Живые истории | 45+'
