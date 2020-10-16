@@ -152,6 +152,9 @@ svg {
   padding-top: 230px;
 
   @include max(1600) {
+    padding-top: 180px;
+  }
+  @include max(1160) {
     padding-top: 100px;
   }
 }

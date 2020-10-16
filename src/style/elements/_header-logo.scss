@@ -1,0 +1,19 @@
+.header__logo {
+  z-index: 102;
+  flex: none;
+  margin-right: 15px;
+
+  @include max(1600) {
+    width: 70px;
+  }
+  @include max(1160) {
+    width: 46px;
+  }
+  @include max(680) {
+    width: 35px;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}

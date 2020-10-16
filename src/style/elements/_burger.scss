@@ -12,7 +12,7 @@
   border-radius: 10px;
   background-color: #ff585d;
 
-  @include max(1600) {
+  @include max(1160) {
     display: flex;
   }
   @include max(680) {

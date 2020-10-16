@@ -1,0 +1,61 @@
+.lang {
+  z-index: 102;
+  display: flex;
+
+  @include max(1160) {
+    margin-left: auto;
+  }
+}
+
+.lang__item {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 13px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #fff;
+  border-right: 1px solid rgba(255, 255, 255, .5);
+
+  @include max(1160) {
+    color: #323232;
+    border-right: 1px solid #cac9c9;
+  }
+  &:last-child {
+    padding-right: 0;
+    border: none;
+  }
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+  &.active {
+    pointer-events: none;
+    color: #ff808b;
+  }
+}
+
+//begin #HEADER INN
+.header--inn {
+  //begin #LANG
+  .lang__item {
+    color: #323232;
+    border-right: 1px solid #cac9c9;
+
+    &:last-child {
+      border: none;
+    }
+    &:hover {
+      color: #323232;
+    }
+    &.active {
+      color: #ff808b;
+    }
+  }
+  //end #LANG
+}
+
+//end #HEADER INN

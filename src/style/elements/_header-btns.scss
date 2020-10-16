@@ -1,0 +1,68 @@
+.header__btns {
+  display: flex;
+
+  @include max(1160) {
+    flex-direction: column;
+  }
+}
+
+.header__btn {
+  font-size: 15px;
+  width: 100%;
+  max-width: 250px;
+  min-height: 60px;
+  margin-right: 20px;
+
+  @include max(1300) {
+    font-size: 14px;
+    line-height: .8;
+    min-height: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  @include max(1160) {
+    font-size: 15px;
+    min-height: 60px;
+    margin-right: 0;
+    margin-bottom: 30px;
+    padding: 7px 40px;
+  }
+}
+
+.header__btn--white {
+  @include max(1600) {
+    display: none;
+  }
+  @include max(1160) {
+    display: flex;
+    color: #323232;
+    border-color: #323232;
+    &:hover {
+      color: #323232;
+      border-color: #323232;
+      background-color: #fff;
+    }
+  }
+}
+
+//begin #HEADER INN
+.header--inn {
+  //begin #BTNS
+  .header__btn--white {
+    color: #323232;
+    border-color: #323232;
+
+    &:hover {
+      color: #323232;
+      background-color: #ffeaec;
+
+      @include max(1160) {
+        border-color: #323232;
+        background-color: #fff;
+      }
+    }
+  }
+  //end #BTNS
+}
+
+//end #HEADER INN

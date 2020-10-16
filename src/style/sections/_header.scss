@@ -6,7 +6,7 @@
   width: 100%;
   padding: 30px 0;
 
-  @include max(1600) {
+  @include max(1160) {
     position: fixed;
     padding: 15px 0;
     background-color: #fffcfc;
@@ -23,7 +23,7 @@
     content: '';
     background-color: #fffcfc;
 
-    @include max(1600) {
+    @include max(1160) {
       display: block;
     }
   }
@@ -33,26 +33,6 @@
   }
 }
 
-//begin #logo
-.header__logo {
-  z-index: 102;
-  flex: none;
-  margin-right: 15px;
-
-  @include max(1600) {
-    width: 46px;
-  }
-  @include max(680) {
-    width: 35px;
-  }
-  img {
-    display: block;
-    width: 100%;
-  }
-}
-
-//end #logo
-
 .header__mobile-menu {
   z-index: 102;
   display: flex;
@@ -61,7 +41,7 @@
   width: 100%;
   transition: $transition;
 
-  @include max(1600) {
+  @include max(1160) {
     position: fixed;
     z-index: 100;
     top: 0;
@@ -93,7 +73,7 @@
   margin: 0;
   padding: 0;
 
-  @include max(1600) {
+  @include max(1160) {
     flex-direction: column;
     padding: 0 0 30px 0;
   }
@@ -103,7 +83,10 @@
   padding: 10px 20px;
   list-style: none;
 
-  @include max(1600) {
+  @include max(1300) {
+    padding: 10px 15px;
+  }
+  @include max(1160) {
     padding: 18px 0;
   }
   @include max(680) {
@@ -120,7 +103,10 @@
   white-space: nowrap;
   color: #fff;
 
-  @include max(1600) {
+  @include max(1300) {
+    font-size: 16px;
+  }
+  @include max(1160) {
     font-size: 30px;
     color: #323232;
   }
@@ -132,7 +118,7 @@
     text-decoration: none;
     color: #fff;
 
-    @include max(1600) {
+    @include max(1160) {
       color: #323232;
     }
     &::before {
@@ -151,7 +137,7 @@
     transition: $transition;
     background-color: #fff;
 
-    @include max(1600) {
+    @include max(1160) {
       bottom: -5px;
       background-color: #323232;
     }
@@ -159,85 +145,6 @@
 }
 
 //end #menu
-
-//begin #BTNS
-.header__btns {
-  display: flex;
-
-  @include max(1600) {
-    flex-direction: column;
-  }
-}
-
-.header__btn {
-  font-size: 15px;
-  width: 100%;
-  max-width: 250px;
-  min-height: 60px;
-  margin-right: 20px;
-
-  @include max(1600) {
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
-}
-
-.header__btn--white {
-  @include max(1600) {
-    color: #323232;
-    border-color: #323232;
-    &:hover {
-      color: #323232;
-      border-color: #323232;
-      background-color: #fff;
-    }
-  }
-}
-
-//end #BTNS
-
-//begin #LANG
-.lang {
-  z-index: 102;
-  display: flex;
-
-  @include max(1600) {
-    margin-left: auto;
-  }
-}
-
-.lang__item {
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 18px;
-  display: flex;
-  align-items: center;
-  height: 30px;
-  padding: 0 13px;
-  text-align: right;
-  text-transform: uppercase;
-  color: #fff;
-  border-right: 1px solid rgba(255, 255, 255, .5);
-
-  @include max(1600) {
-    color: #323232;
-    border-right: 1px solid #cac9c9;
-  }
-  &:last-child {
-    padding-right: 0;
-    border: none;
-  }
-  &:hover {
-    text-decoration: none;
-    color: #fff;
-  }
-  &.active {
-    pointer-events: none;
-    color: #ff808b;
-  }
-}
-
-//end #LANG
 
 //begin #HEADER INN
 .header--inn {
@@ -254,40 +161,6 @@
     }
   }
   //end #MENU
-
-  //begin #BTNS
-  .header__btn--white {
-    color: #323232;
-    border-color: #323232;
-
-    &:hover {
-      color: #323232;
-      background-color: #ffeaec;
-
-      @include max(1600) {
-        border-color: #323232;
-        background-color: #fff;
-      }
-    }
-  }
-  //end #BTNS
-
-  //begin #LANG
-  .lang__item {
-    color: #323232;
-    border-right: 1px solid #cac9c9;
-
-    &:last-child {
-      border: none;
-    }
-    &:hover {
-      color: #323232;
-    }
-    &.active {
-      color: #ff808b;
-    }
-  }
-  //end #LANG
 }
 
 //end #HEADER INN
