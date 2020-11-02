@@ -27,4 +27,7 @@ $(function() {
   // begin header background
   require('./modules/header-bg')();
 
+  // begin tab
+  require('./modules/tab')();
+
 });
