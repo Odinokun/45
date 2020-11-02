@@ -1,10 +1,13 @@
 .header {
-  position: absolute;
+  //position: absolute;
+  position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
   padding: 30px 0;
+  transition: .5s;
+  background-color: transparent;
 
   @include max(1160) {
     position: fixed;
@@ -147,7 +150,9 @@
 //end #menu
 
 //begin #HEADER INN
+.header.active,
 .header--inn {
+  background-color: #fffcfc;
   //begin #MENU
   .header-menu__link {
     color: #323232;

@@ -24,4 +24,7 @@ $(function() {
   // begin Popup
   require('./modules/popup')();
 
+  // begin header background
+  require('./modules/header-bg')();
+
 });
