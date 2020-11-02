@@ -1,7 +1,7 @@
 extends ../_template
 
 mixin faq__item(pic, hashtag, title, text)
-  .faq__item.faq-item
+  a(href="#").faq__item.faq-item
     .faq-item__img
       img(src="assets/img/faq-" + pic + ".jpg" alt="picture")
     h3.faq-item__title.faq-item__title--mobile #{title}
@@ -9,8 +9,8 @@ mixin faq__item(pic, hashtag, title, text)
       h3.faq-item__title.faq-item__title--desktop #{title}
       .faq-item__text #{text}
       .faq-item__footer
-        a(href="#").faq-item__hashtag #{hashtag}
-        a(href="#").faq-item__more Читать полностью
+        .faq-item__hashtag #{hashtag}
+        .faq-item__more Читать полностью
 
 block variables
   - var title       = 'Вопросы и ответы | 45+'
