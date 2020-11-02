@@ -2,8 +2,8 @@ extends ../_template
 
 mixin grid-sec__item(className, pic, countMessaae, hashtag, title)
   li( class="blog-grid__item blog-grid-item blog-grid-item--" + className)
-    a(href="#").grid-sec-item__title #{title}
-    .grid-sec-item__img
+    .grid-sec-item__title #{title}
+    a(href="#").grid-sec-item__img
       img(src="assets/img/bg-grid-" + pic + ".jpg" alt="picture")
     .grid-sec-item__footer
       a(href="#").grid-sec-item__hashtag #{hashtag}

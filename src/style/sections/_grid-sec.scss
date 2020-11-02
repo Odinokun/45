@@ -98,6 +98,7 @@
   z-index: 1;
   margin-bottom: 25px;
   text-decoration: none;
+  pointer-events: none;
   color: #fff;
   &:hover {
     text-decoration: none;
@@ -105,7 +106,8 @@
   }
 }
 
-.grid-sec-item__title:hover + .grid-sec-item__img {
+//.grid-sec-item__title:hover + .grid-sec-item__img {
+.grid-sec-item__img:hover {
   opacity: .5;
 }
 
