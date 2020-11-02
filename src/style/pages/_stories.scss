@@ -135,6 +135,9 @@
   @include max(540) {
     margin-bottom: 16px;
   }
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .stories-grid-item__header {
