@@ -95,6 +95,9 @@
   @include max(680) {
     padding: 12px 0;
   }
+  &::before {
+    display: none;
+  }
 }
 
 .header-menu__link {

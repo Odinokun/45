@@ -15,7 +15,11 @@
 
 .breadcrumbs__item {
   position: relative;
+  padding-left: 0;
   list-style: none;
+  &::before {
+    display: none;
+  }
   &::after {
     font-size: 15px;
     margin: 0 3px 0 4px;
