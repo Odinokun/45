@@ -30,9 +30,9 @@
 }
 
 .header__btn--white {
-  @include max(1600) {
-    display: none;
-  }
+  //@include max(1600) {
+  //  display: none;
+  //}
   @include max(1160) {
     display: flex;
     color: #323232;

@@ -1,5 +1,6 @@
 .doctor-top {
   display: flex;
+  align-items: flex-start;
   padding-bottom: 120px;
 
   @include max(1100) {
